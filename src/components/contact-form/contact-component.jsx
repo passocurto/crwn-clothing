@@ -17,11 +17,18 @@ class Contact extends React.Component {
     };
   }
 
+  
+
   handleSubmit = async event => {
     event.preventDefault();
 
+    //const templateId = 'template_e73qqwe';
+
     const { name, email, description, message } = this.state;
 
+     //SendFeedback(templateId, {message_html: description + ' ' + message , from_name: name, reply_to: email})
+    
+    console.log(this.state);
     try {
       this.setState({
         name: '',
@@ -29,19 +36,34 @@ class Contact extends React.Component {
         description: '',
         message: ''
       });
+      
     } catch (error) {
       console.error(error);
     }
   };
 
+  
   handleChange = event => {
-    const { name, value } = event.target;
+    const { value, name } = event.target;
 
     this.setState({ [name]: value });
   };
 
+//   sendFeedback (templateId, variables) {
+// 	window.emailjs.send(
+//   	'gmail', templateId,
+//   	variables
+//   	).then(res => {
+//     	console.log('Email successfully sent!')
+//   	})
+//   	// Handle errors here however you like, or use a React error boundary
+//   	.catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err))
+//   }
+
   render() {
+
     const { name, email, description, message } = this.state;
+
     return (
       <Container>
         <Title>Would u like talk?</Title>

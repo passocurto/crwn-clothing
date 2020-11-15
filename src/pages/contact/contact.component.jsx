@@ -8,12 +8,8 @@ import {CollectionPageContainer, CollectionTitle } from './contact.styles';
 const ContactPage = ()  => (
     
     <CollectionPageContainer>
-    <CollectionTitle>Send a message to Ricardo Passinho</CollectionTitle>
-    
-        
-          <ContactForm />
-        
-      
+        <CollectionTitle>Send a message to Ricardo Passinho</CollectionTitle>
+        <ContactForm />
     </CollectionPageContainer>
 )
 
