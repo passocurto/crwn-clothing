@@ -1,10 +1,20 @@
 import React from 'react';
 
+import ContactForm from '../../components/contact-form/contact-component';
 
-const ContactPage = () => (
+import {CollectionPageContainer, CollectionTitle } from './contact.styles';
+
+
+const ContactPage = ()  => (
     
-    <h1> hello word !!</h1>
-
+    <CollectionPageContainer>
+    <CollectionTitle>Send a message to Ricardo Passinho</CollectionTitle>
+    
+        
+          <ContactForm />
+        
+      
+    </CollectionPageContainer>
 )
 
 
