@@ -21,9 +21,9 @@ const Footer = ({ sections }) => (
                     </center>
                 </div>
                 <div className='developer'>
-                    <span> Produzido por Ricardo Passinho </span>
+                    <span> Developer Ricardo Passinho </span>
                     <br />
-                    <span> Brazil - 2020 </span>
+                    <span> Brazil - 2021 </span>
                 </div>
             </div>
     )
