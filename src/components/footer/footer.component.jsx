@@ -14,7 +14,7 @@ const Footer = ({ sections }) => (
       <Developer>
         <span> Software Engine: Ricardo Passinho </span>
         <br />
-        <span> Brasil - 2022 </span>
+        <span> Brasil - { new Date().getFullYear() } </span>
       </Developer>
     </center>
   </FooterConteiner>

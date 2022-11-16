@@ -25,14 +25,13 @@ const Header = ({ currentUser, hidden }) => (
     </LogoContainer>
     <StyleName> Seminário para conclusão da matéria de pós-graduação (UNIOESTE)</StyleName>
     <OptionsContainer>
-      <OptionLink to='/shop'>SHOP</OptionLink>
-      <OptionLink to='/contact'>CONTACT</OptionLink>
+      <OptionLink to='/shop'>LOJA</OptionLink>
       {currentUser ? (
         <OptionLink as='div' onClick={() => auth.signOut()}>
-          SIGN OUT
+          Deslogar
         </OptionLink>
       ) : (
-        <OptionLink to='/signin'>SIGN IN</OptionLink>
+        <OptionLink to='/signin'>Entrar</OptionLink>
       )}
       <CartIcon />
     </OptionsContainer>
