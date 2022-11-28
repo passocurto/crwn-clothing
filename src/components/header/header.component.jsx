@@ -26,6 +26,7 @@ const Header = ({ currentUser, hidden }) => (
     <StyleName> Seminário para conclusão da matéria de pós-graduação (UNIOESTE)</StyleName>
     <OptionsContainer>
       <OptionLink to='/shop'>LOJA</OptionLink>
+      <OptionLink to='/contact'>Contato</OptionLink>
       {currentUser ? (
         <OptionLink as='div' onClick={() => auth.signOut()}>
           Deslogar
