@@ -23,6 +23,15 @@ export const OptionsContainer = styled.div`
   justify-content: flex-end;
 `;
 
+export const StyleName = styled.span`
+  font-weight: bolder;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  
+`;
+
+
 export const OptionLink = styled(Link)`
   padding: 10px 15px;
   cursor: pointer;

@@ -52,78 +52,7 @@ class Contact extends React.Component {
 
     return (
       <Container>
-        <Title>Would u like talk?</Title>
-        <span>Send a message to developer</span>
-        <Formik  initialValues={{ email: '', password: '' }}
-
-        validate={values => {
-          const errors = {};
- 
-          if (!values.email) {
-             errors.email = 'Required';
-           } else if (
-             !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-           ) {
-             errors.email = 'Invalid email address';
-           }
-           return errors;
-         }}
- 
-        onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-             alert(JSON.stringify(values, null, 2));
-             setSubmitting(false);
-          }, 400);
-        }}
-      >
-      {({
-        values,
-        errors,
-        touched,
-        handleChange,
-        handleBlur,
-        handleSubmit,
-        isSubmitting,
-        /* and other goodies */
-      }) => (
-        <form className='sign-up-form' onSubmit={this.handleSubmit}>
-          <FormInput
-            type='text'
-            name='name'
-            value={name}
-            onChange={this.handleChange}
-            label='name'
-            required
-          />
-          <FormInput
-            type='email'
-            name='email'
-            value={email}
-            onChange={this.handleChange}
-            label='Email'
-            required
-          />
-          <FormInput
-            type='description'
-            name='description'
-            value={description}
-            onChange={this.handleChange}
-            label='description'
-            required
-          />
-          <FormInput
-            type='message'
-            name='message'
-            value={message}
-            onChange={this.handleChange}
-            label='message'
-            required
-          />
-          { errors.password && touched.password && errors.password }
-          <CustomButton>SEND MESSAGE</CustomButton>
-        </form>
-        )}
-        </Formik>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf65hcNyXPIedPQU-pIsOfJOEsTxAK3BuO4B9zDDrLQMhRuEA/viewform?embedded=true" width="640" height="1100" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
       </Container>
     );
   }
