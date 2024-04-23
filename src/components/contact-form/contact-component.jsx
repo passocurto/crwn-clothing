@@ -1,16 +1,68 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import { Container } from './contact.styles';
+import { FormContainer, Form, Label, Input, TextArea, Button } from './contact.styles';
 
-class Contact extends React.Component {  
+const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
 
-  render() {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+
+
+ const handleSubmit = (e) => {
+    e.preventDefault();
+
+    console.log(formData);
+    alert('O formulário foi enviado!');
+    setFormData({
+      name: '',
+      email: '',
+      message: ''
+    });
+  };
+
   return (
-      <Container>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf65hcNyXPIedPQU-pIsOfJOEsTxAK3BuO4B9zDDrLQMhRuEA/viewform?embedded=true" width="640" height="1100" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
-      </Container>
-    );
-  }
-}
+    <FormContainer>
+      <Form onSubmit={handleSubmit}>
+        <Label htmlFor="name">Nome:</Label>
+        <Input
+          type="text"
+          id="name"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
+        <Label htmlFor="email">Email:</Label>
+        <Input
+          type="email"
+          id="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+        <Label htmlFor="message">Mensagem:</Label>
+        <TextArea
+          id="message"
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          required
+        />
+        <Button type="submit">Enviar</Button>
+      </Form>
+    </FormContainer>
+  );
+};
 
-export default Contact;
+export default ContactForm;
